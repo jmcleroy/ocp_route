@@ -2,12 +2,12 @@
 - name: Create OCS Storage on OCP
   hosts: localhost
   gather_facts: false
-  collections:
-    - community.kubernetes
+#  collections:
+#    - community.kubernetes
 
   tasks:
     - name: Openshift-storage Namespace
-      community.kubernetes.k8s:
+      k8s:
         state: present
         definition:
           apiVersion: route.openshift.io/v1
